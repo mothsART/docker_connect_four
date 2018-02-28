@@ -9,7 +9,7 @@ RUN sh rustup.sh -y --channel=nightly --disable-sudo
 RUN git clone https://github.com/mothsART/connect_four.git \
    && cd connect_four
 
-CMD cargo run --bin web
-CMD cargo run --bin ws
+CMD cargo run --release --bin web
+CMD cargo run --release --bin ws
 
 EXPOSE 8000
